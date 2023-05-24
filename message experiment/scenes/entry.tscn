@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bdfocgi70wmx7"]
+[gd_scene load_steps=2 format=3 uid="uid://bdfocgi70wmx7"]
+
+[ext_resource type="Script" path="res://scripts/TimeLabel.cs" id="2_1t0pv"]
 
 [node name="Node" type="Node"]
 
@@ -21,10 +23,20 @@ offset_right = 872.0
 offset_bottom = 315.0
 grow_vertical = 2
 
+[node name="Label" type="Label" parent="Control/Server List"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 26.0
+grow_horizontal = 2
+text = "Server List:"
+vertical_alignment = 1
+
 [node name="Servers" type="VBoxContainer" parent="Control/Server List"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
+offset_top = 26.0
 offset_bottom = 567.0
 grow_horizontal = 2
 
@@ -47,7 +59,7 @@ offset_right = -0.150024
 grow_vertical = 2
 placeholder_text = "Search"
 
-[node name="Label" type="Label" parent="Control/Server List/Server Search"]
+[node name="Matches" type="Label" parent="Control/Server List/Server Search"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -59,3 +71,80 @@ grow_vertical = 2
 text = "0 Matches"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Info Section" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -314.0
+offset_bottom = 315.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="Control/Info Section"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.0
+offset_right = 128.0
+offset_bottom = 36.0
+grow_horizontal = 2
+placeholder_text = "Name"
+
+[node name="Your IP Label" type="Label" parent="Control/Info Section"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.0
+offset_top = 48.0
+offset_right = 126.0
+offset_bottom = 74.0
+grow_horizontal = 2
+text = "Your IP:"
+
+[node name="Server Info" type="VBoxContainer" parent="Control/Info Section"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.0
+offset_top = 82.0
+offset_right = 124.0
+offset_bottom = 168.0
+grow_horizontal = 2
+
+[node name="Name Label" type="Label" parent="Control/Info Section/Server Info"]
+layout_mode = 2
+text = "Server Name: "
+autowrap_mode = 3
+
+[node name="IP Label" type="Label" parent="Control/Info Section/Server Info"]
+layout_mode = 2
+text = "Server IP:"
+
+[node name="User Count Label" type="Label" parent="Control/Info Section/Server Info"]
+layout_mode = 2
+text = "Connected User Count: "
+
+[node name="Users Label" type="Label" parent="Control/Info Section/Server Info"]
+layout_mode = 2
+text = "Connected Users:"
+
+[node name="Time Label" type="Label" parent="Control/Info Section"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Current Time: "
+vertical_alignment = 1
+script = ExtResource("2_1t0pv")
