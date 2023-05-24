@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bdfocgi70wmx7"]
+
+[node name="Node" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Server List" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -314.0
+offset_right = 872.0
+offset_bottom = 315.0
+grow_vertical = 2
+
+[node name="Servers" type="VBoxContainer" parent="Control/Server List"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 567.0
+grow_horizontal = 2
+
+[node name="Server Search" type="Control" parent="Control/Server List"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextEdit" type="TextEdit" parent="Control/Server List/Server Search"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.825
+anchor_bottom = 1.0
+offset_right = -0.150024
+grow_vertical = 2
+placeholder_text = "Search"
+
+[node name="Label" type="Label" parent="Control/Server List/Server Search"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -142.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "0 Matches"
+horizontal_alignment = 1
+vertical_alignment = 1

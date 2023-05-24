@@ -50,7 +50,7 @@ grow_horizontal = 2
 
 [node name="IP Label" type="Label" parent="Control/Info Section/Server Info"]
 layout_mode = 2
-text = "Current IP:"
+text = "IP:"
 
 [node name="User Count Label" type="Label" parent="Control/Info Section/Server Info"]
 layout_mode = 2
